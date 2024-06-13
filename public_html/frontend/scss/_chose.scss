@@ -1,0 +1,66 @@
+//skill__wrapper
+.skill__wrapper {
+    .skill__title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .progress {
+        background: rgba($theme-color, 0.05);
+        height: 20px;
+        border-radius: 0;
+    }
+    .progress-bar {
+        width: 90%;
+        background-color: $theme-color;
+    }
+    .progress-bar-2 {
+        width: 80%;
+        background-color: $theme-color;
+    }
+    .progress-bar-3 {
+        width: 85%;
+        background-color: $theme-color;
+    }
+}
+
+.chose__img__wrapper__one {
+    position: relative;
+    z-index: 1;
+    .chose__main__1 {
+        position: relative;
+        z-index: 1;
+        margin-top: -55px;
+        @media #{$max-lg} {
+            margin-top: 0;
+            width: 100%;
+        }
+    }
+
+    .chose__main__2 {
+        position: absolute;
+        z-index: 1;
+        left: 40px;
+        bottom: -50px;
+    }
+
+    .chose__shape__1 {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 5%;
+        left: 13%;
+    }
+
+    .chose__shape__2 {
+        width: 240px;
+        height: 240px;
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        border: 50px solid $theme-color;
+        mix-blend-mode: multiply;
+        right: 29%;
+        top: 28%;
+        animation: float-bob-y infinite linear 3s;
+    }
+}

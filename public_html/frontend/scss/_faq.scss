@@ -1,0 +1,106 @@
+//faq__que__list
+.faq__que__list {
+    position: relative;
+    z-index: 1;
+    .faq__pattern__1 {
+        position: absolute;
+        z-index: -1;
+        right: -4%;
+        top: -9px;
+    }
+    .accordion-item {
+        border: 0;
+        background: $white;
+        box-shadow: 5px 15px 40px 0px rgba(24, 24, 24, 0.05);
+        button:focus,
+        input:focus,
+        input:focus,
+        textarea,
+        textarea:focus {
+            outline: 0;
+        }
+        .border-class {
+            border: 1px solid $theme-color;
+            display: inline-block;
+            width: 100%;
+        }
+        .accordion-button {
+            transition: unset;
+            color: $heding;
+            font-size: 20px;
+            font-family: $inter;
+            font-weight: 600;
+            line-height: 24px;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            padding: 25px 25px 20px 25px;
+            position: relative;
+            box-shadow: 0;
+            -webkit-transition: unset;
+            -moz-transition: unset;
+            -ms-transition: unset;
+            -o-transition: unset;
+            word-wrap: normal;
+            display: inline-block;
+            background: transparent;
+
+            &.collapsed {
+                padding-bottom: 24px;
+            }
+            @media #{$md} {
+                padding: 21px 20px;
+                font-size: 18px;
+            }
+            @media #{$xs} {
+                padding: 21px 15px;
+                font-size: 18px;
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: 0;
+            }
+
+            &::before {
+                content: "\F286";
+                position: absolute;
+                font-family: "bootstrap-icons";
+                font-size: 20px;
+                font-weight: 300;
+                color: $heding;
+                right: 30px;
+                top: 50%;
+                transform: translateY(-50%) rotate(0deg);
+                transition: 0.3s linear;
+                z-index: 1;
+                @media #{$md} {
+                    right: 10px;
+                    font-size: 16px;
+                }
+                @media #{$xs} {
+                    right: 10px;
+                    font-size: 16px;
+                }
+            }
+            &::after {
+                display: none;
+            }
+        }
+        .collapsed {
+            border: 0;
+            &::before {
+                color: $heding;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        .accordion-body {
+            padding: 0;
+            padding: 0px 48px 10px 25px;
+            @media #{$xs} {
+                padding: 0 15px 10px 15px;
+            }
+        }
+    }
+}

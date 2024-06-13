@@ -1,0 +1,300 @@
+//about__bg_map
+.about__bg_map {
+    position: relative;
+    z-index: 1;
+    .ab__map__bg {
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+//service__region
+.service__region {
+    border: 2px solid $secondary-color;
+    .icon {
+        width: 80px;
+        height: 76px;
+        display: inline-block;
+        background: $secondary-color;
+        text-align: center;
+        line-height: 80px;
+        margin-right: 20px;
+    }
+    h4 {
+        color: $heding;
+        font-size: 24px;
+        font-weight: 600;
+        display: inline-block;
+    }
+    @media #{$max-xs} {
+        text-align: center;
+        padding: 30px 0;
+        .icon {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+//about__img__wrapper
+.about__img__wrapper {
+    position: relative;
+    z-index: 1;
+    .about__main {
+        @media #{$max-lg} {
+            width: 100%;
+        }
+    }
+    .about__1 {
+        position: absolute;
+        z-index: -1;
+        left: 95px;
+        top: 98px;
+    }
+
+    .about__2 {
+        position: absolute;
+        z-index: -1;
+        left: 70px;
+        top: 56%;
+    }
+
+    .about__3 {
+        position: absolute;
+        z-index: 1;
+        right: 19%;
+        top: 16%;
+    }
+
+    .about__shape__bg {
+        position: absolute;
+        z-index: -2;
+        background: #f8f9fc;
+        width: 95%;
+        height: 442px;
+        bottom: 0;
+        left: 15px;
+    }
+    .support__box {
+        position: absolute;
+        right: -17px;
+        bottom: -40px;
+        z-index: 1;
+        text-align: center;
+        background: $theme-color;
+        padding: 30px 30px 20px 30px;
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            display: inline-block;
+            margin: 0 auto 20px auto;
+            background: $white;
+            border-radius: 50%;
+        }
+        .suppot__title {
+            color: $white;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .number {
+            font-size: 24px;
+            color: $white;
+        }
+    }
+    @media #{$max-lg} {
+        .about__3 {
+            right: 11%;
+        }
+        .support__box {
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+//about__img__wrapper__two
+.about__img__wrapper__two {
+    position: relative;
+    z-index: 1;
+    .about__main__1 {
+        position: relative;
+        z-index: 1;
+        @media #{$max-lg} {
+            width: 100%;
+        }
+    }
+    .about__main__2 {
+        position: absolute;
+        z-index: 3;
+        right: 50px;
+        bottom: -50px;
+    }
+    .about__shape__1 {
+        width: 310px;
+        height: 310px;
+        border: 30px solid $secondary-color;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        top: -60px;
+        left: 20px;
+    }
+    .about__shape__2 {
+        background: rgba($theme-color, 0.8);
+        width: 180px;
+        height: 180px;
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        right: 19%;
+        bottom: 10%;
+    }
+}
+
+//about__content__wrapper__two
+.about__content__wrapper__two {
+    .quote__text {
+        font-size: 20px;
+        font-weight: 500;
+        font-style: italic;
+        color: $heding;
+        border-left: 4px solid $secondary-color;
+        padding-left: 20px;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .service__type {
+        border-top: 2px solid rgba(119, 124, 144, 0.1);
+        border-bottom: 2px solid rgba(119, 124, 144, 0.1);
+        border-right: 2px solid rgba(119, 124, 144, 0.1);
+        .icon {
+            background: red;
+            display: inline-block;
+            padding: 10px;
+        }
+        h5 {
+            font-size: 20px;
+            font-weight: 600;
+            display: inline-block;
+            padding-left: 15px;
+            padding-right: 12px;
+        }
+        &:hover {
+            background: $white;
+            box-shadow: 5px 15px 40px 0px rgba(24, 24, 24, 0.05);
+            border-top-color: $white;
+            border-bottom-color: $white;
+            border-right-color: $white;
+        }
+    }
+}
+
+//about__img__reveal__wrapper
+.about__img__reveal__wrapper {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 450px;
+
+    .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        margin: 15px;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        line-height: 0;
+        border-radius: 24px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            background: $heding;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .popup-video {
+            background: $white;
+            width: 66px;
+            height: 66px;
+            line-height: 66px;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -ms-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    .box > img {
+        width: 100%;
+        // height: calc(100% - 10vh);
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        border-radius: 24px;
+    }
+
+    .box:hover {
+        &::before {
+            opacity: 0.3;
+        }
+        flex: 1 1 50%;
+    }
+    .box:hover > img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//about__img__wrapper__three
+.about__img__wrapper__three {
+    position: relative;
+    z-index: 1;
+    .about__main {
+        @media #{$max-md} {
+            width: 100%;
+        }
+    }
+    .about__1 {
+        position: absolute;
+        z-index: 1;
+        left: 50px;
+        bottom: -80px;
+    }
+    .about__shape__bg {
+        width: 320px;
+        height: 320px;
+        border: 50px solid $theme-color;
+        mix-blend-mode: multiply;
+        position: absolute;
+        z-index: 2;
+        right: 12.2%;
+        top: 36%;
+        animation: float-bob-y 4s infinite linear;
+        @media #{$max-md} {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}

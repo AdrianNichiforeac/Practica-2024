@@ -1,0 +1,283 @@
+//theme__main__banner
+.theme__main__banner {
+    position: relative;
+    z-index: 1;
+    .banner__description {
+        color: $white;
+        font-size: 24px;
+        line-height: 1.6;
+        max-width: 93%;
+    }
+    .popup-video {
+        width: 60px;
+        height: 60px;
+        line-height: 58px;
+        border-radius: 60px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+        backdrop-filter: blur(7.5px);
+        @include transition(0.3s);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    @media #{$max-lg} {
+        .banner__description {
+            font-size: 18px;
+        }
+        .banner__btn {
+            justify-content: center;
+        }
+    }
+}
+
+//main__banner__bg
+.main__banner__bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: linear-gradient(133deg, #181818 0%, rgba(24, 24, 24, 0.3) 100%);
+        background: -moz-linear-gradient(133deg, #181818 0%, rgba(24, 24, 24, 0.3) 100%);
+        background: -ms-linear-gradient(133deg, #181818 0%, rgba(24, 24, 24, 0.3) 100%);
+        background: -o-linear-gradient(133deg, #181818 0%, rgba(24, 24, 24, 0.3) 100%);
+        background: -webkit-linear-gradient(133deg, #181818 0%, rgba(24, 24, 24, 0.3) 100%);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .pattern__h1 {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+    }
+    .pattern__h2 {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+}
+
+//thumbs__slider
+.thumbs__slider {
+    margin-top: -84px;
+    position: relative;
+    z-index: 11;
+    //theme__thumbs__title
+    .theme__thumbs__title {
+        text-align: center;
+        color: $white;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        padding: 28px 25px;
+        width: 100%;
+        display: inline-block;
+        border-top: 3px solid rgba(255, 255, 255, 0.2);
+        border-right: 3px solid rgba(255, 255, 255, 0.2);
+        border-left: 3px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(7.5px);
+    }
+    .swiper-slide-active {
+        .theme__thumbs__title {
+            border-top: 3px solid $secondary-color;
+            border-right: 3px solid $secondary-color;
+            border-left: 3px solid $secondary-color;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: -ms-linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+        }
+    }
+    @media #{$max-lg} {
+        .theme__thumbs__title {
+            font-size: 18px;
+        }
+    }
+}
+
+//banner__sub__title
+.banner__sub__title {
+    color: $secondary-color;
+    font-size: 32px;
+    font-weight: 500;
+    @media #{$max-lg} {
+        font-size: 20px;
+    }
+}
+
+//banner__main__title
+.banner__main__title {
+    font-size: 96px;
+    color: $white;
+    line-height: 1.2;
+    span {
+        color: $secondary-color;
+        border-bottom: 2px solid $secondary-color;
+    }
+    @media #{$max-laptop} {
+        font-size: 55px;
+    }
+    @media #{$max-lg} {
+        font-size: 55px;
+    }
+    @media #{$max-md} {
+        font-size: 45px;
+    }
+    @media #{$max-xs} {
+        font-size: 38px;
+    }
+}
+
+//banner__sub__title2
+.banner__sub__title2 {
+    color: $secondary-color;
+    font-size: 24px;
+    text-transform: uppercase;
+    @media #{$max-xs} {
+        font-size: 20px;
+    }
+}
+
+//theme__content__two
+.theme__content__two {
+    position: relative;
+    z-index: 1;
+    //search__section
+    .search__section {
+        display: inline-block;
+        width: 683px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        span {
+            background: linear-gradient(135deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -moz-linear-gradient(135deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -ms-linear-gradient(135deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -o-linear-gradient(135deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -webkit-linear-gradient(135deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            backdrop-filter: blur(7.5px);
+            padding: 25px;
+            float: left;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .search__content {
+            background: $secondary-color;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            padding: 25px 30px;
+            input {
+                color: rgba($heding, 0.5);
+                font-size: 16px;
+                font-weight: 400;
+                background: transparent;
+                border: 0;
+                border-bottom: 2px solid rgba($heding, 0.5);
+                display: block;
+                width: 310px;
+            }
+            button {
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                height: 50px;
+                background: $heding;
+                display: inline-block;
+                padding: 13px 25px;
+                line-height: 1;
+                border: 0;
+                &:hover {
+                    background: $theme-color;
+                }
+            }
+            @media #{$max-xs} {
+                input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+                button {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        @media #{$max-md} {
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        @media #{$max-xs} {
+            width: 100%;
+        }
+    }
+}
+
+//banner__main__title__two
+.banner__main__title__two {
+    font-size: 108px;
+    line-height: 1.24;
+    span {
+        color: $secondary-color;
+        text-decoration: underline;
+    }
+    @media #{$max-laptop} {
+        font-size: 80px;
+    }
+    @media #{$max-lg} {
+        font-size: 55px;
+    }
+    @media #{$max-md} {
+        font-size: 45px;
+    }
+    @media #{$max-xs} {
+        font-size: 38px;
+    }
+}
+
+//theme__main__banner__three
+.theme__main__banner__three {
+    position: relative;
+    z-index: 1;
+    .shadow__text {
+        position: absolute;
+        z-index: -1;
+        font-size: 310px;
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+        opacity: 0.1;
+        background: linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+        background: -moz-linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+        background: -o-linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+        background: -ms-linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+        background: -webkit-linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        left: 0;
+        right: 0;
+        top: 31%;
+        text-align: center;
+        @media #{$max-laptop} {
+            font-size: 100px;
+        }
+        @media #{$max-lg} {
+            font-size: 55px;
+        }
+    }
+}

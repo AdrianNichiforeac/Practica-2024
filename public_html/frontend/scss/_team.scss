@@ -1,0 +1,78 @@
+//teams__wrapper
+.teams__wrapper {
+    border: 2px solid rgba(#777c90, 0.2);
+    padding: 20px;
+    .teams__designation {
+        color: $theme-color;
+    }
+
+    .plus_icon {
+        width: 60px;
+        height: 60px;
+        background: $theme-color;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .teams__thumb {
+        position: relative;
+        z-index: 1;
+    }
+
+    .teams__icon__wrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        &:hover {
+            .teams__social__media {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+    .teams__icon {
+        position: relative;
+        z-index: 1;
+    }
+
+    .teams__social__media {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.5s ease-in-out;
+        width: 60px;
+        position: relative;
+        z-index: 1;
+        a {
+            color: $white;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+            background: $theme-color;
+            padding: 7px 5px;
+
+            i {
+                transition: all 0.5s ease-in-out;
+            }
+            &:hover {
+                i {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+//teams__title
+.teams__title {
+    color: $heding;
+    font-size: 24px;
+    @media #{$max-lg} {
+        font-size: 20px;
+    }
+}

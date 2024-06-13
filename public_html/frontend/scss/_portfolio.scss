@@ -1,0 +1,335 @@
+//portfolio__wrapper
+.portfolio__wrapper {
+    background: $white;
+    box-shadow: 5px 15px 40px 0px rgba(24, 24, 24, 0.05);
+    position: relative;
+    z-index: 1;
+    .portfolio__thumb {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -moz-linear-gradient(180deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -ms-linear-gradient(180deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -webkit-linear-gradient(180deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            background: -o-linear-gradient(180deg, rgba(24, 24, 24, 0.3) 0%, rgba(24, 24, 24, 0.1) 100%);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            height: 0;
+            left: 0;
+            top: 0;
+            @include transition(0.3s);
+        }
+        &::after {
+            content: "";
+            background: url("../img/icon/plus.svg") no-repeat;
+            position: absolute;
+            z-index: 1;
+            width: 45px;
+            height: 45px;
+            left: 50%;
+            top: -15%;
+            @include transition(0.3s);
+            cursor: pointer;
+        }
+
+        img {
+            display: block;
+            @include transition(0.3s);
+        }
+    }
+    .portfolio__content {
+        background: white;
+        padding: 35px 30px 10px 30px;
+        position: absolute;
+        z-index: 2;
+        left: 40px;
+        right: 40px;
+        top: 74.5%;
+        @include transition(0.3s);
+        @media #{$max-lg} {
+            padding: 35px 10px 10px 10px;
+            left: 0;
+            right: 0;
+        }
+    }
+    &:hover {
+        .portfolio__thumb {
+            &::before {
+                height: 100%;
+            }
+            &::after {
+                top: 30%;
+                transform: translate(-30%, -50%);
+            }
+        }
+        .portfolio__content {
+            background: $theme-color;
+            .portfolio__title {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+}
+
+//portfolio__title
+.portfolio__title {
+    font-size: 32px;
+    line-height: 1.4;
+    @media #{$max-lg} {
+        font-size: 26px;
+    }
+    @media #{$max-md} {
+        font-size: 20px;
+    }
+}
+
+//portfolio__wrapper__two
+.portfolio__wrapper__two {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    .img__pattern {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        @include transition(0.3s);
+    }
+    .portfolio__thumb {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            background: rgba(24, 24, 24, 0.5);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            @include transition(0.3s);
+        }
+    }
+    .portfolio__count {
+        font-size: 90px;
+        position: absolute;
+        z-index: 5;
+        font-weight: 900;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $white;
+        right: 40px;
+        top: 40px;
+        @media #{$max-laptop} {
+            font-size: 50px;
+        }
+    }
+    .portfolio__content {
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        top: 82%;
+        z-index: 3;
+        @include transition(0.3s);
+        p {
+            color: $white;
+            font-size: 20px;
+        }
+        .portfolio__title__two {
+            margin-bottom: 40px;
+            @include transition(0.3s);
+        }
+        @media #{$max-laptop} {
+            left: 15px;
+            right: 15px;
+            top: 75%;
+        }
+        @media #{$max-lg} {
+            left: 15px;
+            right: 15px;
+            top: 80%;
+        }
+    }
+    &:hover {
+        .img__pattern {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+        }
+        .portfolio__thumb {
+            &::before {
+                background: $theme-color;
+            }
+        }
+        .portfolio__content {
+            top: auto;
+            bottom: 40px;
+            .portfolio__title__two {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+//portfolio__title__two
+.portfolio__title__two {
+    color: $white;
+    font-size: 28px;
+    @media #{$max-laptop} {
+        font-size: 22px;
+    }
+    @media #{$max-lg} {
+        font-size: 20px;
+    }
+}
+
+//portfolio__wrapper__three
+.portfolio__wrapper__three {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    .portfolio__content {
+        padding-left: 30px;
+        padding-right: 38px;
+        padding-top: 48px;
+        padding-bottom: 23px;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: -100%;
+        right: 0;
+        border-radius: 0px 0px 24px 24px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+        background: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+        background: -ms-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+        background: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+        backdrop-filter: blur(7.5px);
+        border-radius: 0 0 24px 24px;
+        @include transition(0.3s);
+        .portfolio__thumb {
+            img {
+                border-radius: 24px;
+            }
+        }
+        .portfolio__title__three {
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        @media #{$max-lg} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .portfolio__btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $white;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        position: absolute;
+        z-index: 1;
+        right: 56px;
+        bottom: 116px;
+        @include transition(0.3s);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &:hover {
+        .portfolio__content {
+            bottom: 0;
+        }
+    }
+}
+
+//portfolio__title__three
+.portfolio__title__three {
+    color: $white;
+    font-size: 24px;
+    @media #{$max-lg} {
+        font-size: 20px;
+    }
+}
+
+//portfolio__bg__wrapper
+.portfolio__bg__wrapper {
+    position: relative;
+    z-index: 1;
+    .portfolio__bg3 {
+        position: absolute;
+        z-index: -1;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 7.5%;
+    }
+}
+
+//project__details__area
+.project__details__area {
+    p {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+//project__info__content
+.project__info__content {
+    padding: 30px 40px;
+    border: 10px solid $white;
+    margin-top: -204px;
+    margin-bottom: 50px;
+    @media #{$max-md} {
+        margin-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .project__info {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .project__info__title {
+        color: $white;
+        margin-bottom: 20px;
+        @media #{$max-md} {
+            font-size: 20px;
+        }
+    }
+    .project__info__box {
+        .info__label {
+            color: $white;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .info__title {
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,283 @@
+/*plan*/
+.ht-plan {
+    padding: 40px 15px 15px 15px;
+    background: $white;
+    box-shadow: 5px 15px 40px 0px rgba(24, 24, 24, 0.05);
+    @include transition(0.3s);
+    position: relative;
+    z-index: 1;
+
+    .pattern__2 {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    .ht-plan__tag {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        z-index: 1;
+        color: $heding;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+        padding: 10px 13px;
+        display: inline-block;
+        background: $secondary-color;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .ht-plan__header {
+        padding: 0 30px;
+        .ht-plan__header-title {
+            font-size: 30px;
+            line-height: 1.1;
+            @media #{$max-lg} {
+                font-size: 26px;
+            }
+        }
+        .ht-plan__header-desc {
+            color: $body-text-color;
+        }
+        .ht-plan__header-price {
+            .price-title {
+                display: inline-block;
+                color: $heding;
+                font-size: 60px;
+                line-height: 1.1;
+            }
+            span {
+                display: inline-block;
+                color: $heding;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            @media #{$max-lg} {
+                .price-title {
+                    font-size: 40px;
+                }
+            }
+            @media #{$max-sm} {
+                .price-title {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .ht-plan__body {
+        background: $theme-color;
+        padding: 22px 30px 15px 30px;
+        position: relative;
+        z-index: 1;
+        .pattern__1 {
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .ht-plan__body-feature {
+            padding: 0;
+            & li {
+                padding-left: 26px;
+                margin-bottom: 15px;
+                list-style: none;
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    content: "\f00c";
+                    position: absolute;
+                    color: $theme-color;
+                    font-size: 12px;
+                    font-family: "Font Awesome 5 Pro";
+                    text-align: center;
+                    line-height: 19px;
+                    left: 0;
+                    top: 7px;
+                    background: $white;
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 50%;
+                }
+                & a {
+                    color: $white;
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+        }
+        @media #{$max-lg} {
+            padding: 22px 10px 15px 10px;
+        }
+    }
+    .ht-plan__footer {
+        padding-left: 30px;
+        padding-right: 30px;
+        .ht_btn {
+            color: $heding;
+            background: $grey;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &:hover,
+    &.active {
+        background: $theme-color;
+        .pattern__2 {
+            opacity: 1;
+            visibility: visible;
+        }
+        .ht-plan__tag {
+            visibility: visible;
+            opacity: 1;
+        }
+        .ht-plan__header-title,
+        .ht-plan__header-desc,
+        .ht-plan__header-price .price-title,
+        .ht-plan__header-price span {
+            color: $white;
+        }
+
+        .ht-plan__body {
+            background: $white;
+            .pattern__1 {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .ht-plan__body-feature {
+                li {
+                    &::before {
+                        color: $white;
+                        background: $secondary-color;
+                    }
+                    a {
+                        color: $body-text-color;
+                    }
+                }
+            }
+        }
+
+        .ht-plan__footer {
+            .ht_btn {
+                color: $white;
+                width: 100%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background: $heding;
+            }
+        }
+    }
+    @media #{$max-lg} {
+        padding: 30px 15px 20px 15px;
+    }
+}
+
+.ht-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.ht-toggle-left,
+.ht-toggle-right {
+    cursor: pointer;
+}
+
+.ht-toggle-left {
+    margin-right: 2%;
+}
+
+.ht-toggle-head-one,
+.ht-toggle-head-two {
+    margin: 0;
+    padding: 0;
+}
+
+.ht-toggle label {
+    color: rgba(0, 1, 8, 1) !important;
+    cursor: pointer;
+}
+
+.ht-content-toggle {
+    .ht-toggle-btn {
+        font-size: 15px;
+        align-items: center;
+    }
+}
+
+.ht-switch-label {
+    position: relative;
+    display: inline-block;
+    width: 4.5em;
+    height: 2.3em;
+    vertical-align: middle;
+    .ht-toggle-switch {
+        display: none;
+    }
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+}
+
+.ht-content-toggle .ht-switch-inner {
+    background-color: $theme-color;
+}
+
+.ht-switch-inner {
+    border-radius: 1.5em;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.4s;
+}
+
+.ht-content-toggle .ht-switch-inner::before {
+    background-color: $white;
+}
+
+.ht-switch-inner::before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    height: 1.8em;
+    width: 1.8em;
+    left: 0.25em;
+    bottom: 0.25em;
+    transition: all 0.4s;
+}
+
+.ht-content-toggle .ht-toggle-switch:checked + .ht-switch-inner {
+    background-color: $theme-color;
+}
+
+.ht-toggle-switch:checked + .ht-switch-inner::before {
+    -webkit-transform: translateX(2.1em);
+    transform: translateX(2.1em);
+}
+
+.ht-toggle-right {
+    margin-left: 2%;
+}
+
+.ht-content-toggle .ht-content-toggle-front,
+.ht-content-toggle .ht-content-toggle-back {
+    padding: 0;
+}
+
+.ht-content-toggle-front,
+.ht-content-toggle-back {
+    margin-top: 25px;
+}

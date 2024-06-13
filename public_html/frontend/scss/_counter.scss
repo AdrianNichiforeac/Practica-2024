@@ -1,0 +1,118 @@
+//counter__bg__wrapper
+.counter__bg__wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+//counter__wrapper
+.counter__wrapper {
+    .counter__icon {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50%;
+        background: $secondary-color;
+        display: inline-block;
+        text-align: center;
+        margin-right: -41px;
+        position: relative;
+        z-index: 1;
+        top: -28px;
+        @include transition(0.3s);
+        @media #{$max-laptop} {
+            margin-right: 0;
+            margin-left: 0;
+            top: 0;
+            margin-bottom: 15px;
+            margin-top: 0px;
+        }
+    }
+    .counter__inner {
+        background: $white;
+        box-shadow: 5px 15px 40px 0px rgba(24, 24, 24, 0.05);
+        display: inline-block;
+        padding: 35px 30px 20px 58px;
+        border: 2px solid transparent;
+        @include transition(0.3s);
+        @media #{$max-laptop} {
+            display: block;
+        }
+        @media #{$max-lg} {
+            width: 100%;
+            padding: 35px 10px 20px 10px;
+        }
+    }
+    .counter__number {
+        font-size: 40px;
+        margin-bottom: 2px;
+        @media #{$max-lg} {
+            font-size: 28px;
+        }
+    }
+    &:hover {
+        .counter__icon {
+            background: $theme-color;
+        }
+        .counter__inner {
+            border: 2px solid $theme-color;
+        }
+    }
+}
+
+//counter__wrapper__two
+.counter__wrapper__two {
+    .counter__number {
+        color: $theme-color;
+        font-size: 48px;
+        @media #{$max-lg} {
+            font-size: 28px;
+        }
+    }
+    .counter__title {
+        font-size: 24px;
+        @media #{$max-xs} {
+            font-size: 18px;
+        }
+    }
+}
+
+//counter__wrapper__three
+.counter__wrapper__three {
+    position: relative;
+    z-index: 1;
+    .counter__icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        background: $theme-color;
+        text-align: center;
+        line-height: 80px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -40px;
+        margin: 0 auto;
+    }
+    .counter__inner {
+        padding: 60px 0 5px 0;
+        border-radius: 10px;
+        background: $white;
+        box-shadow: 5px 15px 30px 0px rgba(5, 13, 54, 0.05);
+        .counter__number {
+            color: $heding;
+            font-size: 32px;
+        }
+        .divider {
+            display: inline-block;
+            width: 72px;
+            border: 3px dashed $secondary-color;
+        }
+        .counter__title {
+            font-size: 20px;
+        }
+    }
+}

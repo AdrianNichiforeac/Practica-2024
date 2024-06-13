@@ -1,0 +1,8 @@
+//partner-wrapper
+.partner-wrapper {
+    img {
+        &:hover {
+            filter: invert(22%) sepia(33%) saturate(6726%) hue-rotate(339deg) brightness(89%) contrast(112%);
+        }
+    }
+}
